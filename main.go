@@ -29,7 +29,7 @@ func getJWT(pemBytes []byte, appID string) (string, error) {
 	return tokenString, nil
 }
 
-func getSecretVal(pemPath string, signBytes *[]byte) error {
+func getSecretVal(pemPath string) ([]byte, error) {
 	// get the secret value
 	runtime, err := vals.New(vals.Options{
 		LogOutput:             os.Stdout,
@@ -38,16 +38,14 @@ func getSecretVal(pemPath string, signBytes *[]byte) error {
 		FailOnMissingKeyInMap: true,
 	})
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	signString, err := runtime.Get(pemPath)
 	if err != nil {
-		return err
+		return nil, err
 	}
-	byteSlice := []byte(signString)
-	signBytes = &byteSlice
-	return nil
+	return []byte(signString), nil
 }
 
 func main() {
@@ -64,13 +62,13 @@ func main() {
 	var signBytes []byte
 	var err error
 	if strings.HasPrefix(pemPath, "ref+") {
-		getSecretVal(pemPath, &signBytes)
+		signBytes, err = getSecretVal(pemPath)
 	} else {
 		signBytes, err = os.ReadFile(pemPath)
-		if err != nil {
-			fmt.Println(err)
-			os.Exit(1)
-		}
+	}
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
 	tokenString, err := getJWT(signBytes, appID)
