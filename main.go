@@ -81,20 +81,21 @@ func main() {
 		"Authorization": []string{fmt.Sprintf("Bearer %s", tokenString)},
 		"Accept":        []string{"application/vnd.github.v3+json"},
 	}
+	client := &http.Client{}
 
-	installationID, err := runnerreg.GetInstallationID(headers)
+	installationID, err := runnerreg.GetInstallationID(client, headers)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
-	installationToken, err := runnerreg.GetInstallationToken(installationID, headers)
+	installationToken, err := runnerreg.GetInstallationToken(client, installationID, headers)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
-	runnerToken, err := runnerreg.GetRunnerToken(installationToken, org)
+	runnerToken, err := runnerreg.GetRunnerToken(client, installationToken, org)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)

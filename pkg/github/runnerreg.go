@@ -15,9 +15,12 @@ type Token struct {
 	Token string `json:"token"`
 }
 
-func GetInstallationID(headers http.Header) (int, error) {
+type HttpClient interface {
+	Do(req *http.Request) (*http.Response, error)
+}
+
+func GetInstallationID(client HttpClient, headers http.Header) (int, error) {
 	url := "https://api.github.com/app/installations"
-	client := &http.Client{}
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return 0, err
@@ -39,9 +42,8 @@ func GetInstallationID(headers http.Header) (int, error) {
 	return installations[0].ID, nil
 }
 
-func GetInstallationToken(installationID int, headers http.Header) (string, error) {
+func GetInstallationToken(client HttpClient, installationID int, headers http.Header) (string, error) {
 	url := fmt.Sprintf("https://api.github.com/app/installations/%d/access_tokens", installationID)
-	client := &http.Client{}
 	req, err := http.NewRequest("POST", url, nil)
 	if err != nil {
 		return "", err
@@ -63,9 +65,8 @@ func GetInstallationToken(installationID int, headers http.Header) (string, erro
 	return token.Token, nil
 }
 
-func GetRunnerToken(installationToken, orgName string) (string, error) {
+func GetRunnerToken(client HttpClient, installationToken, orgName string) (string, error) {
 	url := fmt.Sprintf("https://api.github.com/orgs/%s/actions/runners/registration-token", orgName)
-	client := &http.Client{}
 	req, err := http.NewRequest("POST", url, nil)
 	if err != nil {
 		return "", err
