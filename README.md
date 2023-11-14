@@ -2,6 +2,19 @@
 
 A simple program to turn GitHub App IDs and private keys into a runner registration token. This is useful for setting up self-hosted runners in a CI/CD pipeline.
 
+## Usage
+
+```bash
+``bash
+$ ./gh-runner-regger ref+gcpsecrets://secrets-project/private-key app-id myOrg
+```
+
+The first argument can either point to a local pem file or any valid vals url, see below.
+
+## See also
+
+- [vals](https://GitHub.com/helmfile/vals) - A tool for injecting values into YAML files from a variety of sources
+
 ## MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
