@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  env.GOPROXY = "direct";
+
+
   packages = [ pkgs.git ];
 
   languages.go.enable = true;
