@@ -22,3 +22,6 @@ jobs:
 
       - name: Build the devenv shell and run any pre-commit hooks
         run: devenv ci
+
+      - name: Run tests
+        run: devenv shell go test -race -cover ./...
