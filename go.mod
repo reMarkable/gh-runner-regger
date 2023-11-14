@@ -2,7 +2,10 @@ module github.com/remarkable/gh-runner-regger
 
 go 1.21.3
 
-require github.com/golang-jwt/jwt v3.2.2+incompatible
+require (
+	github.com/golang-jwt/jwt v3.2.2+incompatible
+	github.com/helmfile/vals v0.28.1
+)
 
 require (
 	cloud.google.com/go v0.110.7 // indirect
@@ -90,7 +93,6 @@ require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hashicorp/jsonapi v0.0.0-20210826224640-ee7dae0fb22d // indirect
 	github.com/hashicorp/vault/api v1.10.0 // indirect
-	github.com/helmfile/vals v0.28.1 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/itchyny/gojq v0.12.11 // indirect
 	github.com/itchyny/timefmt-go v0.1.5 // indirect
@@ -131,7 +133,7 @@ require (
 	google.golang.org/genproto v0.0.0-20230822172742-b8732ec3820d // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20230803162519-f966b187b2e5 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230913181813-007df8e322eb // indirect
-	google.golang.org/grpc v1.58.1 // indirect
+	google.golang.org/grpc v1.58.3 // indirect
 	google.golang.org/protobuf v1.31.0 // indirect
 	gopkg.in/gookit/color.v1 v1.1.6 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
