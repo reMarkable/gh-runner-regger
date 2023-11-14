@@ -4,12 +4,14 @@ A simple program to turn GitHub App IDs and private keys into a runner registrat
 
 ## Usage
 
+````bash
 ```bash
-``bash
 $ ./gh-runner-regger ref+gcpsecrets://secrets-project/private-key app-id myOrg
-```
+````
 
-The first argument can either point to a local pem file or any valid vals url, see below.
+The first argument can either point to a local `pem` file or any valid `vals` URL, see below for more info on `vals`.
+It should represent a private key for a GitHub App. app-id is the numeric ID of the GitHub App. `myOrg` is the name of the organization where
+the app is installed.
 
 ## See also
 
