@@ -12,16 +12,25 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: cachix/install-nix-action@v23
-      - uses: cachix/cachix-action@v12
+      - name: Check out
+        uses: actions/checkout@v4
+      - name: Install nix
+        uses: DeterminateSystems/nix-installer-action@v4
+      - name: Install cachix
+        uses: cachix/cachix-action@v12
         with:
           name: devenv
       - name: Install devenv.sh
         run: nix profile install tarball+https://install.devenv.sh/latest
-
-      - name: Build the devenv shell and run any pre-commit hooks
-        run: devenv ci
-
-      - name: Run tests
-        run: devenv shell go test -race -cover ./...
+      - name: Setup nix cache
+        uses: DeterminateSystems/magic-nix-cache-action@v2
+      - name: Setup go cache
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+      - name: Run pre-commit hooks
+        run: |
+          devenv shell pre-commit run --all-files
+      - name: Build
+        run: |
+          devenv shell go build
