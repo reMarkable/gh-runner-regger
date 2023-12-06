@@ -1,0 +1,3 @@
+* @reMarkable/cloud-services
+/terraform @reMarkable/cloud-services @rm-atlantis-bot
+/atlantis-webhook-terraform @reMarkable/cloud-services @rm-atlantis-bot

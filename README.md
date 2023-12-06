@@ -2,6 +2,10 @@
 
 A simple program to turn GitHub App IDs and private keys into a runner registration token. This is useful for setting up self-hosted runners in a CI/CD pipeline.
 
+To set it up, create a new github app and generate a private key for it. Make sure to install the app in the organization you want to use it in.
+The app needs read/write access to github runners. Then, use this tool to generate a registration token for the app.
+You can then use the token to register a runner.
+
 ## Usage
 
 ````bash
@@ -12,6 +16,8 @@ $ ./gh-runner-regger ref+gcpsecrets://secrets-project/private-key app-id myOrg
 The first argument can either point to a local `pem` file or any valid `vals` URL, see below for more info on `vals`.
 It should represent a private key for a GitHub App. app-id is the numeric ID of the GitHub App. `myOrg` is the name of the organization where
 the app is installed.
+
+Note that this approach can only be used to register org level runners, not repo level runners.
 
 ## See also
 
