@@ -30,7 +30,7 @@ jobs:
           go-version-file: go.mod
       - name: Run pre-commit hooks
         run: |
-          devenv shell pre-commit run --all-files
+          devenv shell -- pre-commit run --all-files
       - name: Build
         run: |
-          devenv shell go build
+          devenv shell -- go build
