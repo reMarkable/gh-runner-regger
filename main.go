@@ -32,7 +32,7 @@ func getJWT(pemBytes []byte, appID string) (string, error) {
 func getSecretVal(pemPath string) ([]byte, error) {
 	// get the secret value
 	runtime, err := vals.New(vals.Options{
-		LogOutput:             os.Stdout,
+		LogOutput:             os.Stderr,
 		CacheSize:             100,
 		ExcludeSecret:         true,
 		FailOnMissingKeyInMap: true,
