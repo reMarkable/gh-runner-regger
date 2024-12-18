@@ -15,7 +15,6 @@ require (
 	cloud.google.com/go v0.116.0 // indirect
 	cloud.google.com/go/auth v0.12.1 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.6 // indirect
-	cloud.google.com/go/compute v1.29.0 // indirect
 	cloud.google.com/go/compute/metadata v0.5.2 // indirect
 	cloud.google.com/go/iam v1.3.0 // indirect
 	cloud.google.com/go/kms v1.20.2 // indirect
@@ -23,7 +22,7 @@ require (
 	cloud.google.com/go/monitoring v1.22.0 // indirect
 	cloud.google.com/go/secretmanager v1.14.2 // indirect
 	cloud.google.com/go/storage v1.48.0 // indirect
-	filippo.io/age v1.2.0 // indirect
+	filippo.io/age v1.2.1 // indirect
 	github.com/1Password/connect-sdk-go v1.5.3 // indirect
 	github.com/1password/onepassword-sdk-go v0.1.5 // indirect
 	github.com/AlecAivazis/survey/v2 v2.3.7 // indirect
@@ -75,7 +74,6 @@ require (
 	github.com/aws/smithy-go v1.22.1 // indirect
 	github.com/bgentry/go-netrc v0.0.0-20140422174119-9fd32a8b3d3d // indirect
 	github.com/blang/semver v3.5.1+incompatible // indirect
-	github.com/cenkalti/backoff/v3 v3.2.2 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/census-instrumentation/opencensus-proto v0.4.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
@@ -97,7 +95,6 @@ require (
 	github.com/fxamacker/cbor/v2 v2.7.0 // indirect
 	github.com/getsops/gopgagent v0.0.0-20240527072608-0c14999532fe // indirect
 	github.com/getsops/sops/v3 v3.9.2 // indirect
-	github.com/go-jose/go-jose/v3 v3.0.3 // indirect
 	github.com/go-jose/go-jose/v4 v4.0.4 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
@@ -145,7 +142,6 @@ require (
 	github.com/hashicorp/jsonapi v1.3.1 // indirect
 	github.com/hashicorp/vault/api v1.15.0 // indirect
 	github.com/ianlancetaylor/demangle v0.0.0-20240912202439-0a2b6291aafd // indirect
-	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/itchyny/gojq v0.12.17 // indirect
 	github.com/itchyny/timefmt-go v0.1.6 // indirect
@@ -208,9 +204,7 @@ require (
 	golang.org/x/term v0.27.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
 	golang.org/x/time v0.8.0 // indirect
-	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	google.golang.org/api v0.211.0 // indirect
-	google.golang.org/appengine v1.6.8 // indirect
 	google.golang.org/genproto v0.0.0-20241209162323-e6fa225c2576 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20241209162323-e6fa225c2576 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20241209162323-e6fa225c2576 // indirect
