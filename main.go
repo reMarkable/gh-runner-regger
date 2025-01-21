@@ -85,19 +85,20 @@ func main() {
 
 	installationID, err := runnerreg.GetInstallationID(client, headers)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Error: %v, Number: %d\n", err, installationID)
+		fmt.Println("Check if time is synchronized (timedatectl)")
 		os.Exit(1)
 	}
 
 	installationToken, err := runnerreg.GetInstallationToken(client, installationID, headers)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Error: %v, installationToken: %s\n", err, installationToken)
 		os.Exit(1)
 	}
 
 	runnerToken, err := runnerreg.GetRunnerToken(client, installationToken, org)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("Error: %v, runnerToken: %s\n", err, runnerToken)
 		os.Exit(1)
 	}
 
