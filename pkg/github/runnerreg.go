@@ -3,6 +3,7 @@ package runnerreg
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 )
 
@@ -23,20 +24,26 @@ func GetInstallationID(client HttpClient, headers http.Header) (int, error) {
 	url := "https://api.github.com/app/installations"
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
-		return 0, err
+		return -1, err
 	}
 
 	req.Header = headers
 	resp, err := client.Do(req)
 	if err != nil {
-		return 0, err
+		return -2, err
 	}
 	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		body, _ := io.ReadAll(resp.Body)
+		fmt.Printf("Request failed with status %d: %s\n", resp.StatusCode, string(body))
+		return -3, nil
+	}
 
 	var installations []Installation
 	err = json.NewDecoder(resp.Body).Decode(&installations)
 	if err != nil {
-		return 0, err
+		return -3, err
 	}
 
 	return installations[0].ID, nil
