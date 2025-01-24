@@ -25,10 +25,6 @@ jobs:
         run: nix profile install tarball+https://install.devenv.sh/latest
       - name: Setup nix cache
         uses: DeterminateSystems/magic-nix-cache-action@v2
-      - name: Setup go cache
-        uses: actions/setup-go@v4
-        with:
-          go-version-file: go.mod
       - name: Run pre-commit hooks
         run: |
           devenv shell -- pre-commit run --all-files
