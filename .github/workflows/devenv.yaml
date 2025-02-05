@@ -21,13 +21,8 @@ jobs:
         uses: cachix/cachix-action@v12
         with:
           name: devenv
-      - name: Install devenv.sh
-        run: nix profile install tarball+https://install.devenv.sh/latest
-      - name: Setup nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@v2
-      - name: Run pre-commit hooks
-        run: |
-          devenv shell -- pre-commit run --all-files
+      - name: Run devenv tests
+        run: nix develop --quiet --impure --command bash -c "devenv test"
       - name: Build
         run: |
           devenv shell -- go build
