@@ -19,7 +19,7 @@ func getJWT(pemBytes []byte, appID string) (string, error) {
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodRS256, jwt.MapClaims{
 		"iat": time.Now().Unix(),
-		"exp": time.Now().Add(time.Minute * 10).Unix(),
+		"exp": time.Now().Add(time.Minute * 9).Unix(),
 		"iss": appID,
 	})
 	tokenString, err := token.SignedString(signingKey)
