@@ -9,7 +9,6 @@ You can then use the token to register a runner.
 ## Usage
 
 ````bash
-```bash
 $ ./gh-runner-regger ref+gcpsecrets://secrets-project/private-key app-id myOrg
 ````
 
