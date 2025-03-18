@@ -1,0 +1,16 @@
+{
+    "name": "Shared SSH config",
+    "id": "shared-ssh",
+    "version": "0.1.0",
+    "description": "Sets up .ssh against a docker volume, so it will be shared between devcontainers",
+    "mounts": [
+        {
+            "source": "devcontainer_ssh",
+            "target": "/home/vscode/.ssh",
+            "type": "volume"
+        }
+    ],
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
