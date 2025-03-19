@@ -2,7 +2,7 @@ module github.com/remarkable/gh-runner-regger
 
 go 1.23.0
 
-toolchain go1.23.3
+toolchain go1.24.1
 
 require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible
