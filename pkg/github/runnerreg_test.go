@@ -45,7 +45,7 @@ func TestGetInstallationToken(t *testing.T) {
 			// Simulate a response for the installation token request
 			r := io.NopCloser(bytes.NewReader([]byte(`{"token": "test-installation-token"}`)))
 			return &http.Response{
-				StatusCode: 200,
+				StatusCode: 201,
 				Body:       r,
 			}, nil
 		},
@@ -68,7 +68,7 @@ func TestGetRunnerToken(t *testing.T) {
 			// Simulate a response for the runner token request
 			r := io.NopCloser(bytes.NewReader([]byte(`{"token": "test-runner-token"}`)))
 			return &http.Response{
-				StatusCode: 200,
+				StatusCode: 201,
 				Body:       r,
 			}, nil
 		},
