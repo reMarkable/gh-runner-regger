@@ -87,14 +87,23 @@ func GetRunnerToken(client HttpClient, installationToken, orgName string) (strin
 
 	resp, err := client.Do(req)
 	if err != nil {
-		return "", err
+		return "", fmt.Errorf("failed to send request: %w", err)
 	}
 	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusCreated {
+		body, _ := io.ReadAll(resp.Body) // Read response body for debugging
+		return "", fmt.Errorf("unexpected status code: %d, response: %s", resp.StatusCode, string(body))
+	}
 
 	var token Token
 	err = json.NewDecoder(resp.Body).Decode(&token)
 	if err != nil {
-		return "", err
+		return "", fmt.Errorf("failed to decode response body: %w", err)
+	}
+
+	if token.Token == "" {
+		return "", fmt.Errorf("received empty token from API")
 	}
 
 	return token.Token, nil
