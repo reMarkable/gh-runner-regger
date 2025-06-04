@@ -242,6 +242,8 @@ github.com/cyberark/conjur-api-go v0.12.14 h1:E/dTORBq7/wu/llODfeuWmZa3lQy1D4dHz
 github.com/cyberark/conjur-api-go v0.12.14/go.mod h1:0ZVdpe/GzMMQyZkGV3o9bM/jswH3XrBEU9phSL0lP/g=
 github.com/cyberark/conjur-api-go v0.12.15 h1:hLHzm3Q4XSW7rlsTklGqInpQBhAJozR5KZM//qLvE/8=
 github.com/cyberark/conjur-api-go v0.12.15/go.mod h1:0ZVdpe/GzMMQyZkGV3o9bM/jswH3XrBEU9phSL0lP/g=
+github.com/cyberark/conjur-api-go v0.13.0 h1:x6gB9MtzUX+SJmKmDxv0ZNFPl+U5bjIA5/sSWqVLGXw=
+github.com/cyberark/conjur-api-go v0.13.0/go.mod h1:0ZVdpe/GzMMQyZkGV3o9bM/jswH3XrBEU9phSL0lP/g=
 github.com/danieljoos/wincred v1.2.2 h1:774zMFJrqaeYCK2W57BgAem/MLi6mtSE47MB6BOJ0i0=
 github.com/danieljoos/wincred v1.2.2/go.mod h1:w7w4Utbrz8lqeMbDAK0lkNJUv5sAOkFi7nd/ogr0Uh8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -299,6 +301,8 @@ github.com/go-openapi/analysis v0.23.0 h1:aGday7OWupfMs+LbmLZG4k0MYXIANxcuBTYUC0
 github.com/go-openapi/analysis v0.23.0/go.mod h1:9mz9ZWaSlV8TvjQHLl2mUW2PbZtemkE8yA5v22ohupo=
 github.com/go-openapi/errors v0.22.0 h1:c4xY/OLxUBSTiepAg3j/MHuAv5mJhnf53LLMWFB+u/w=
 github.com/go-openapi/errors v0.22.0/go.mod h1:J3DmZScxCDufmIMsdOuDHxJbdOGC0xtUynjIx092vXE=
+github.com/go-openapi/errors v0.22.1 h1:kslMRRnK7NCb/CvR1q1VWuEQCEIsBGn5GgKD9e+HYhU=
+github.com/go-openapi/errors v0.22.1/go.mod h1:+n/5UdIqdVnLIJ6Q9Se8HNGUXYaY6CN8ImWzfi/Gzp0=
 github.com/go-openapi/jsonpointer v0.21.0 h1:YgdVicSA9vH5RiHs9TZW5oyafXZFc6+2Vc1rr/O9oNQ=
 github.com/go-openapi/jsonpointer v0.21.0/go.mod h1:IUyH9l/+uyhIYQ/PXVA41Rexl+kOkAPDdXEYns6fzUY=
 github.com/go-openapi/jsonreference v0.21.0 h1:Rs+Y7hSXT83Jacb7kFyjn4ijOuVGSvOdF2+tg1TRrwQ=
@@ -424,6 +428,8 @@ github.com/hashicorp/hcp-sdk-go v0.139.0 h1:jvEIwYg84/ZFphNJrk5Hoa5bYj5wORHgRQcb
 github.com/hashicorp/hcp-sdk-go v0.139.0/go.mod h1:ZxsZZjErm3E2sj2OjDeVsGJAkWtcRLUS+FrNLGPsUyw=
 github.com/hashicorp/hcp-sdk-go v0.142.0 h1:fODrRtwKeBfcJlsw54ieO7o4PdraHjPMp90sotQQdLM=
 github.com/hashicorp/hcp-sdk-go v0.142.0/go.mod h1:ZxsZZjErm3E2sj2OjDeVsGJAkWtcRLUS+FrNLGPsUyw=
+github.com/hashicorp/hcp-sdk-go v0.144.0 h1:6zGpBE2smZzVEAv/e2D4/Nw37n9rfiiHYR9b3EeKXJ0=
+github.com/hashicorp/hcp-sdk-go v0.144.0/go.mod h1:HYHwfLOi7gvZwtqTQfPRYlK+XDup9NWhVRDU6N24tOs=
 github.com/hashicorp/jsonapi v1.3.1 h1:GtPvnmcWgYwCuDGvYT5VZBHcUyFdq9lSyCzDjn1DdPo=
 github.com/hashicorp/jsonapi v1.3.1/go.mod h1:kWfdn49yCjQvbpnvY1dxxAuAFzISwrrMDQOcu6NsFoM=
 github.com/hashicorp/vault/api v1.16.0 h1:nbEYGJiAPGzT9U4oWgaaB0g+Rj8E59QuHKyA5LhwQN4=
@@ -434,6 +440,8 @@ github.com/helmfile/vals v0.41.0 h1:IFgvrUoKIelVxtueDhLYLg/UZ46U10NNadE2Cl3TP9o=
 github.com/helmfile/vals v0.41.0/go.mod h1:Rn0w6JxHuGyEBUCXUGd81U7nsXU2qcc48lhNA8b4+/Y=
 github.com/helmfile/vals v0.41.1 h1:8vQQETrqaCjondpqsoVgOLT69Gy6r2BWttEOiOj3bnQ=
 github.com/helmfile/vals v0.41.1/go.mod h1:mmfj2R731IR0iuRt/owyt9yOUjHZqf7kx9OlWH9EYZo=
+github.com/helmfile/vals v0.41.2 h1:lWusJUyxfgP4Mj47mjXXS6qPmp268Nc/2KarlBPvRnA=
+github.com/helmfile/vals v0.41.2/go.mod h1:M2tSao4DvQwqfk8i6coEPxrmRpwIpRbA7E8y3NfsXjY=
 github.com/hinshun/vt10x v0.0.0-20220119200601-820417d04eec h1:qv2VnGeEQHchGaZ/u7lxST/RaJw+cv273q79D81Xbog=
 github.com/hinshun/vt10x v0.0.0-20220119200601-820417d04eec/go.mod h1:Q48J4R4DvxnHolD5P8pOtXigYlRuPLGl6moFx3ulM68=
 github.com/ianlancetaylor/demangle v0.0.0-20240912202439-0a2b6291aafd h1:EVX1s+XNss9jkRW9K6XGJn2jL2lB1h5H804oKPsxOec=
