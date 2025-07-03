@@ -24,7 +24,7 @@ jobs:
       - name: Install devenv.sh
         run: nix profile install tarball+https://install.devenv.sh/latest
       - name: Setup nix cache
-        uses: DeterminateSystems/magic-nix-cache-action@v11
+        uses: DeterminateSystems/magic-nix-cache-action@v12
       - name: Setup go cache
         uses: actions/setup-go@v5
         with:
