@@ -26,7 +26,7 @@ jobs:
       - name: Setup nix cache
         uses: DeterminateSystems/magic-nix-cache-action@v13
       - name: Setup go cache
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
       - name: Run pre-commit hooks
