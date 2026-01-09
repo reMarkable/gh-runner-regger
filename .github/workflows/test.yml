@@ -1,0 +1,19 @@
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  lints:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    name: Build
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+      - name: Setup Go
+        uses: actions/setup-go@4dc6199c7b1a012772edbd06daecab0f50c9053c # v6
+        with:
+          # Semantic version range syntax or exact version of Go
+          go-version: '1.25.x'
+      - run: go test -v ./...
