@@ -6,3 +6,4 @@ devenv.local.nix
 
 # direnv
 .direnv
+.envrc
